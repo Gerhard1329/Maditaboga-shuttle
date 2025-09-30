@@ -190,35 +190,73 @@
             margin-bottom: 20px;
         }
         
-        /* Pricing Section */
-        .pricing {
-            padding: 80px 0;
-        }
-        
-        .pricing-table {
-            overflow-x: auto;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-        }
-        
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        th {
-            background-color: var(--light-gray);
-            font-weight: 600;
-        }
-        
-        tr:hover {
-            background-color: #f9f9f9;
-        }
+        /* Vehicle type Section */
+        .vehicles {
+    padding: 60px 20px;
+    background: #fff7f0; /* light orange tint */
+    text-align: center;
+}
+
+.vehicles h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #ff6600; /* orange heading */
+}
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.vehicle-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.vehicle-card img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.vehicle-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.vehicle-card p {
+    font-size: 16px;
+    color: #666;
+}
+.book-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+    background: #e65c00;
+}
+
         
         /* About Section */
         .about {
@@ -506,121 +544,45 @@ nav ul.show {
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Pricing</h2>
-                <p>Competitive rates for all our transportation services. Contact us for custom quotes.</p>
+    <!-- Vehicle type Section -->
+    <section class="vehicles" id="vehicles">
+    <div class="container">
+        <h2>Choose Vehicle Type Below</h2>
+        <div class="vehicle-grid">
+            <!-- Sedan -->
+            <div class="vehicle-card">
+                <img src="Sedan.jpeg" alt="Sedan - 1 to 3 Passengers">
+                <h3>SEDAN</h3>
+                <p>Capacity: 1 - 3 Passengers</p>
+                <a href="https://wa.me/27729436244?text=Hi%20Maditaboga%20Shuttle%20Service%2C%20I%20would%20like%20to%20book%20a%20ride." target="_blank" class="book-btn">Book Now</a>
             </div>
-            <div class="pricing-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Vehicle Type</th>
-                            <th>Route</th>
-                            <th>Capacity</th>
-                            <th>Price (One Way)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>SEDAN</td>
-                            <td>Airport shuttle</td>
-                            <td>1-3 PAX</td>
-                            <td>R700.00</td>
-                        </tr>
-                        <tr>
-                            <td>KOMBI</td>
-                            <td>Airport shuttle</td>
-                            <td>1-7 PAX</td>
-                            <td>R1600.00</td>
-                        </tr>
-                        <tr>
-                            <td>QUANTUM</td>
-                            <td>Airport shuttle</td>
-                            <td>1-13 PAX</td>
-                            <td>R2400.00</td>
-                        </tr>
-                        <tr>
-                            <td>22 SEATER BUS</td>
-                            <td>Airport shuttle</td>
-                            <td>1-22 PAX</td>
-                            <td>R3600.00</td>
-                        </tr>
-                        <tr>
-                            <td>SEDAN</td>
-                            <td>Hotel - SunCity/Pilanesburg</td>
-                            <td>1-3 PAX</td>
-                            <td>R2800.00</td>
-                        </tr>
-                        <tr>
-                            <td>KOMBI</td>
-                            <td>Hotel - SunCity/Pilanesburg</td>
-                            <td>1-7 PAX</td>
-                            <td>R4800.00</td>
-                        </tr>
-                    </tbody>
-                </table>
+
+            <!-- Kombi -->
+            <div class="vehicle-card">
+                <img src="Kombi.jpeg" alt="Kombi - 1 to 7 Passengers">
+                <h3>KOMBI</h3>
+                <p>Capacity: 1 - 7 Passengers</p>
+                <a href="https://wa.me/27729436244?text=Hi%20Maditaboga%20Shuttle%20Service%2C%20I%20would%20like%20to%20book%20a%20ride." target="_blank" class="book-btn">Book Now</a>
             </div>
-            <div style="text-align: center; margin-top: 30px;">
-               <!-- Downloadable Price List -->
-<p>
-    <a href="Maditaboga_PriceList.pdf" download class="cta-button download-btn">📥 Download Price List (PDF)</a>
-</p>
 
-<!-- Button to toggle PDF viewer -->
-<p>
-    <button id="toggleBtn" onclick="togglePDF()" class="cta-button">📄 View Price List</button>
-</p>
+            <!-- Quantum -->
+            <div class="vehicle-card">
+                <img src="Quantum.jpeg" alt="Quantum - 1 to 13 Passengers">
+                <h3>QUANTUM</h3>
+                <p>Capacity: 1 - 13 Passengers</p>
+                <a href="https://wa.me/27729436244?text=Hi%20Maditaboga%20Shuttle%20Service%2C%20I%20would%20like%20to%20book%20a%20ride." target="_blank" class="book-btn">Book Now</a>
+            </div>
 
-<!-- Collapsible PDF Viewer -->
-<div id="pdfViewer" style="display: none; margin: 20px 0;">
-    <iframe src="Maditaboga_PriceList.pdf" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 5px;">
-        Your browser does not support PDF viewing. 
-        <a href="Maditaboga_PriceList.pdf" download>Click here to download the price list.</a>
-    </iframe>
-</div>
-
-<p><em>Please contact us for other routes and custom quotations</em></p>
-
-<style>
-    .cta-button {
-        display: inline-block;
-        padding: 12px 20px;
-        background: orange;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background 0.3s ease;
-        border: none;
-        cursor: pointer;
-    }
-    .cta-button:hover {
-        background: darkorange;
-    }
-</style>
-
-<script>
-    function togglePDF() {
-        const viewer = document.getElementById("pdfViewer");
-        const btn = document.getElementById("toggleBtn");
-
-        if (viewer.style.display === "none") {
-            viewer.style.display = "block";
-            btn.textContent = "❌ Hide Price List";
-        } else {
-            viewer.style.display = "none";
-            btn.textContent = "📄 View Price List";
-        }
-    }
-</script>
-
-
+            <!-- 22 Seater Bus -->
+            <div class="vehicle-card">
+                <img src="22 Seater bus.jpeg" alt="22 Seater Bus - 1 to 22 Passengers">
+                <h3>22 SEATER BUS</h3>
+                <p>Capacity: 1 - 22 Passengers</p>
+                <a href="https://wa.me/27729436244?text=Hi%20Maditaboga%20Shuttle%20Service%2C%20I%20would%20like%20to%20book%20a%20ride." target="_blank" class="book-btn">Book Now</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- About Section -->
     <section class="about" id="about">
